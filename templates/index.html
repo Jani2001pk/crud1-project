@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>hi hello welcome to index page</h1><br>
+
+    <a href="{% url 'contact_link' %}">go to contact page</a>
+
+    <h2>HTML Table</h2>
+
+<table>
+  <tr>
+    <th>Sl No</th>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Mobile</th>
+    <th>Address</th>
+  </tr>
+{% for i in e %}
+  <tr>
+    <td>{{forloop.counter}}</td>
+    <td>{{i.first_name}}</td>
+    <td>{{i.last_name}}</td>
+    <td>{{i.mobile_number}}</td>
+    <td>{{i.address}}</td>
+  </tr>
+{% endfor %}
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>contact page</h1><br>
+
+    <a href="{% url 'index_link' %}">go to index page</a>
+    <br><br>
+
+    <form action="" method="post">
+        {% csrf_token %}
+
+        <label for="first name">first name</label>
+        <input type="text" name="f_name" id="" placeholder="first name" required>
+        <br><br>
+
+        <label for="last name">last name</label>
+        <input type="text" name="l_name" id="" placeholder="last name" required>
+        <br><br>
+
+        <label for="mobile">mobile</label>
+        <input type="number" name="number" id="" placeholder="mobile" required>
+        <br><br>
+
+        <label for="address">address</label>
+        <textarea name="address" id="" required></textarea>
+        <br><br>
+        <button type="submit">submit</button>
+        
+    </form>
+
+    
+</body>
+</html>
